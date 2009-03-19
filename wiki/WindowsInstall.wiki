@@ -22,7 +22,8 @@ this will leave you with two files, privkey.pem and pubkey.der.  pubkey.der is t
 
 6.  In a plain text editor like Windows Notepad or Notepad++ (http://notepad-plus.sourceforge.net), open up privkey.pem.  Highlight the ENTIRE file and Copy it to the clipboard (Edit, Copy).  Now close privkey.pem and open privkey.py which is in your GAIL folder.  Paste the contents of privkey.pem into privkey.py as shown below:
 
-{{{import gdata.tlslite.utils.keyfactory
+{{{
+import gdata.tlslite.utils.keyfactory
 
 key = gdata.tlslite.utils.keyfactory.parsePEMKey("""  <---- Paste privkey.pem here!!
 """, private=True)
