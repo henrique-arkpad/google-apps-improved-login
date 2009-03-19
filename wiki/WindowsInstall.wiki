@@ -13,11 +13,11 @@ Installing Google Apps Improved Login (GAIL)
 you'll need to download the Win32 OpenSSL Light file as well as the Visual C++ 2008 Redistributable.
 
 5. Once you have OpenSSL installed open a command prompt and run the following commands to create your private and public keys:
-
-  cd \OpenSSL\bin  # or wherever your OpenSSL.exe file exists
-  openssl genrsa -out privkey.pem 2048
-  openssl rsa -in privkey.pem -pubout -outform DER -out pubkey.der
-  
+{{{
+cd \OpenSSL\bin  # or wherever your OpenSSL.exe file exists
+openssl genrsa -out privkey.pem 2048
+openssl rsa -in privkey.pem -pubout -outform DER -out pubkey.der
+}}}  
 this will leave you with two files, privkey.pem and pubkey.der.  pubkey.der is the public key that we will upload to Google's servers in a later step but first, we'll configure GAIL to use our privkey.pem private key.  Make sure you take note of the path where your privkey.pem and pubkey.der files are stored (C:\OpenSSL\bin by default).
 
 6.  In a plain text editor like Windows Notepad or Notepad++ (http://notepad-plus.sourceforge.net), open up privkey.pem.  Highlight the ENTIRE file and Copy it to the clipboard (Edit, Copy).  Now close privkey.pem and open privkey.py which is in your GAIL folder.  Paste the contents of privkey.pem into privkey.py as shown below:
@@ -82,10 +82,10 @@ api_version: 1
 save your changes to app.yaml.
 
 9. Awesome!  Now we're ready to upload GAIL to Google's App Engine Servers.  Open a command prompt and run the following:
-
+{{{
   cd \appengine           # or wherever you installed the App Engine SDK
   appcfg.py update gail/
-  
+}}}
 Now GAIL is all ready to take over as your login page!  Just as few more steps as we configure your Google Apps Domain to use GAIL.
 
 10. Log into your Google Apps Dashboard.  You can always log directly into the Dashboard by going to:
@@ -104,7 +104,7 @@ Note the httpS above, we want to keep usernames and passwords secure so we use a
 
   https://your-application-name.appspot.com
   
-for "Change passowrd URL" put:
+for "Change password URL" put:
 
   https://your-application-name.appspot.com/password
   
