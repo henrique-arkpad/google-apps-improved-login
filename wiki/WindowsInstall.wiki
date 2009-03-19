@@ -8,7 +8,7 @@ Installing Google Apps Improved Login (GAIL)
 
 4. Now you'll need to get a copy of OpenSSL in order to generate your RSA public and private keys.  Windows users can download OpenSSL for Win32 from:
 
-  http://www.slproweb.com/products/Win32OpenSSL.html
+  [http://www.slproweb.com/products/Win32OpenSSL.html]
   
 you'll need to download the Win32 OpenSSL Light file as well as the Visual C++ 2008 Redistributable.
 
