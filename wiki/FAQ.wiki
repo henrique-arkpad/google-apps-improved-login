@@ -8,7 +8,7 @@ No, GAIL uses your existing users and passwords by authenticating against your G
 
 *How can Admins log in as users with GAIL?*
 
-Anyone who is an administrator for the Google Apps Domain can log in as another user by specifying their username as <adminuser>+<loginuser> where <adminuser> is the administrator's username and <loginuser> is the user the admin wishes to login as (e.g. admin+enduser).  The admin should use their own password.  GAIL will verify that the admin's username and password is correct and if it is, they will be logged in as the end user.
+Anyone who is an administrator for the Google Apps Domain can log in as another user by specifying their username as `<adminuser>+<loginuser>` where `<adminuser>` is the administrator's username and `<loginuser>` is the user the admin wishes to login as (e.g. admin+enduser).  The admin should use their own password.  GAIL will verify that the admin's username and password is correct and if it is, they will be logged in as the end user.
 
 *How can I customize my login page?*
 
