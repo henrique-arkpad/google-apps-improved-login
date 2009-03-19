@@ -1,0 +1,15 @@
+*How does GAIL work?*
+
+GAIL uses [http://code.google.com/apis/apps/sso/saml_reference_implementation.html Google Apps' Single-Sign On] support to give administrators better control over their user's login experience.  GAIL is designed to run on [http://appengine.google.com Google's App Engine] so it does not require the administrator to set up their own web server.
+
+*Do I have to recreate my user accounts or reset their passwords once I setup GAIL?*
+
+No, GAIL uses your existing users and passwords by authenticating against your Google Apps Domain behind the scenes.  Users will continue to use their same username and password.
+
+*How can Admins log in as users with GAIL?*
+
+Anyone who is an administrator for the Google Apps Domain can log in as another user by specifying their username as <adminuser>+<loginuser> where <adminuser> is the administrator's username and <loginuser> is the user the admin wishes to login as (e.g. admin+enduser).  The admin should use their own password.  GAIL will verify that the admin's username and password is correct and if it is, they will be logged in as the end user.
+
+*How can I customize my login page?*
+
+GAIL's default login page is extremely spartan for the simple reason that I am not a web designer.  You can customize the login page by editing the gail/templates/login.html file.  Be sure to leave the form intact and any python variable like {{ samlrequest }}.  If you wish to include other .css and .jpg files, place them in the gail/static folder and be sure to specify them in app.yaml.  See [http://code.google.com/appengine/docs/python/tools/configuration.html the App Engine Docs] for information on app.yaml.
