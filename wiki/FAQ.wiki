@@ -13,6 +13,7 @@ Anyone who is an administrator for the Google Apps Domain can log in as another 
 *How can Users log in as other users with GAIL?*
 
 GAIL can be configured to give non-admin users access to other user accounts (for example, a teacher could be given access to log in as their students).  GAIL uses group membership to determine who can login as who.  Let's look at an example.  John Jones (jjones@example.com) is in James Smith's (jsmith@example.com) 8th grade class.  If you want to give jsmith rights to login as jjones, you could create a Google Apps group names jjones-become and add jsmith as a member.  Or, if everyone in jsmith's class is a member of is a member of the group Grade8, you could create a group named Grade8-become and add jsmith to the group. *Be aware that currently, if you give a user rights to login as an admin account, they will be able to gain Admin access to Google Apps!*
+
 *How can I customize my login page?*
 
 GAIL's default login page is extremely spartan for the simple reason that I am not a web designer.  You can customize the login page by editing the gail/templates/login.html file.  Be sure to leave the form intact and any python variable like {{ samlrequest }}.  If you wish to include other .css and .jpg files, place them in the gail/static folder and be sure to specify them in app.yaml.  See [http://code.google.com/appengine/docs/python/tools/configuration.html the App Engine Docs] for information on app.yaml.
