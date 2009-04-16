@@ -20,4 +20,4 @@ GAIL's default login page is extremely spartan for the simple reason that I am n
 
 *Help! GAIL was working fine but now users only get a blank screen after login!*
 
-If you are using GAIL 0.3a, the quick fix is to replace your utils.py an [http://google-apps-improved-login.googlecode.com/svn/trunk/gail/utils.py updated version of utils.py from SVN].  For more details on the problem, see [http://groups.google.com/group/google-apps-improved-login/browse_thread/thread/bcb65dcd50bc6b1a?hl=en# this post in the forum.]
+If you are using GAIL 0.3a, the quick fix is to replace your utils.py with an [http://google-apps-improved-login.googlecode.com/svn/trunk/gail/utils.py updated version of utils.py from SVN].  For more details on the problem, see [http://groups.google.com/group/google-apps-improved-login/browse_thread/thread/bcb65dcd50bc6b1a?hl=en# this post in the forum.]
