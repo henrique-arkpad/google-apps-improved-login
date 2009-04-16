@@ -17,3 +17,7 @@ GAIL can be configured to give non-admin users access to other user accounts (fo
 *How can I customize my login page?*
 
 GAIL's default login page is extremely spartan for the simple reason that I am not a web designer.  You can customize the login page by editing the gail/templates/login.html file.  Be sure to leave the form intact and any python variable like {{ samlrequest }}.  If you wish to include other .css and .jpg files, place them in the gail/static folder and be sure to specify them in app.yaml.  See [http://code.google.com/appengine/docs/python/tools/configuration.html the App Engine Docs] for information on app.yaml.
+
+*Help! GAIL was working fine but now users only get a blank screen after login!*
+
+If you are using GAIL 0.3a, the quick fix is to replace your utils.py an [http://google-apps-improved-login.googlecode.com/svn/trunk/gail/utils.py updated version of utils.py from SVN].  For more details on the problem, see [http://groups.google.com/group/google-apps-improved-login/browse_thread/thread/bcb65dcd50bc6b1a?hl=en# this post in the forum.]
